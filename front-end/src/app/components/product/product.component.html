@@ -1,0 +1,43 @@
+<div class="product-container">
+
+    <div class="mainContainer">
+        <div class="imagesContainer">
+            <div class="selectedImageContainer">
+                <img [src]="selectedImage" [alt]="selectedImage">
+            </div>
+            <div class="secondaryImages">
+                <div class="secondary-image">
+                    <img src="{{images[0]}}" alt="Secondary Image" (click)="changeImage(images[0])">
+                </div>
+                <div class="secondary-image">
+                    <img src="{{images[1]}}" alt="Secondary Image" (click)="changeImage(images[1])">
+                </div>
+                <div class="secondary-image">
+                    <img src="{{images[2]}}" alt="Secondary Image" (click)="changeImage(images[2])">
+                </div>
+            </div>
+
+    <div class="productInfo">
+        <div>
+            <h1>{{producto?.productName}}</h1>
+        </div>
+        <div>
+            <h2>{{producto?.price | currency}}</h2>
+        </div>
+        <div>
+            <p>{{producto?.description}}</p>
+        </div>
+        <div>
+            <h3>Stock: {{stock}}</h3>
+        </div>
+        <div class="order">
+            <button [disabled]="minAmountHandler()" class="cartButton" (click)="decreaseClickHandler()" > - </button>
+            <p class="quantity">{{orderQuantity}}</p>
+            <button [disabled]="comparationMaxAmount()" class="cartButton" (click)="increaseClickHandler()" > + </button>
+        </div>
+        <div class="buttonContainer">
+            <button class="cartButton" style="margin-top: 20px" (click)="getUser()">Agregar al carrito</button>
+        </div>
+    </div>
+    
+</div>

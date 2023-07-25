@@ -1,0 +1,34 @@
+<!--navigation bar-->
+<mat-toolbar color="primary" class="navBar">
+    <mat-toolbar-row class="navBarCss">
+
+        <button class="buttonNavBarIconsCss" mat-icon-button aria-label="Inicio" routerLink="/">
+            <img src="../../assets/logo.png" alt="" class="logo-img">
+        </button>
+
+        <div class="storeName">
+            <h1 class="title">TIMELESS CLASSICS</h1>
+        </div>
+        
+        <div class="icons-container">
+
+            <button class="buttonNavBarIconsCss" mat-icon-button matBadgeColor="warn" routerLink="/carrito" (click)="cartRoute()">
+                <mat-icon class="navBarIconsCss" >shopping_cart</mat-icon>
+            </button>
+            <button  mat-icon-button routerLink="/login" (click)="loginRoute()">
+                <mat-icon class="navBarIconsCss">account_box</mat-icon>
+            </button>
+            <button  mat-icon-button (click)="logOut()">
+                <mat-icon class="navBarIconsCss">logout</mat-icon>
+            </button>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<div class="logOutAlert">
+    <p>Sesion cerrada.</p>
+</div>
+
+<div class="errorLogginOut">
+    <p>No estas en una sesion...</p>
+  </div>

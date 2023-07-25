@@ -1,0 +1,115 @@
+.imagesContainer {
+    display: flex;
+    align-items: center; /* Centra verticalmente las imágenes */
+  }
+
+.productInfo h1{
+    font-weight: bold;
+}
+  
+.mainContainer {
+    margin: 20px; /* Agrega un margen exterior */
+}
+  
+.selectedImageContainer {
+    margin: 0 auto;
+    flex: 0 0 40%; /* Ocupa el 70% del espacio disponible horizontalmente */
+}
+
+@media screen and (max-width: 950px) {
+    .selectedImageContainer {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .buttonContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+  
+.selectedImageContainer img {
+    max-width: 500px;
+    width: 80%;
+    height: auto; /* Ajusta la altura de la imagen automáticamente */
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.secondaryImages {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Agrega espacio entre las imágenes secundarias */
+}
+
+.secondary-image img {
+    width: 100px;
+    height: 100px; /* Establece un tamaño fijo para las imágenes secundarias */
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer; /* Cambia el cursor al pasar por encima de las imágenes secundarias */
+}
+
+.productInfo {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.productInfo h3{
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 24px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+p {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.order{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 150px;
+}
+
+.quantity {
+    margin: 0;
+}
+
+.cartButton {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: black;
+    color: gold;
+    cursor: pointer;
+}
+
+@media (max-width: 950px) {
+    .imagesContainer {
+        flex-direction: column;
+    }
+
+    .order, .contenedorBoton {
+        align-self: center;
+    }
+
+    .secondaryImages {
+        flex-direction: row;
+    }
+}
+
+.cartButton:hover {
+    background-color: #0d3d6f;
+}

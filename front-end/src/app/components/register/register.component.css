@@ -1,0 +1,42 @@
+.registerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  mat-card {
+    max-width: 400px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .buttonContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .loginLink {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .statusAlert{
+    position: fixed;
+    bottom: 0;
+    padding: 5px;
+    background-color: black;
+    color: gold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px 0px;
+    display: none;
+    transition: 2s;
+  }
+
+  .mat-mdc-raised-button.mat-primary {
+    --mdc-protected-button-container-color: black;
+    --mdc-protected-button-label-text-color: gold;
+}
